@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#0D1117">
+
+    <!-- 상단 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="16dp"
+        android:gravity="center_vertical"
+        android:background="#1A1A2E">
+
+        <ImageButton
+            android:id="@+id/btnBack"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@android:drawable/ic_media_previous"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:tint="#4CAF50"
+            android:contentDescription="뒤로"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="러닝 기록"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="#FFFFFF"
+            android:layout_marginStart="8dp"/>
+    </LinearLayout>
+
+    <!-- 통계 요약 카드 -->
+    <LinearLayout
+        android:id="@+id/layoutStats"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="#1A1A2E"
+        android:padding="16dp"
+        android:layout_marginTop="1dp">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center">
+            <TextView android:id="@+id/tvTotalRuns"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="0" android:textSize="24sp" android:textStyle="bold"
+                android:textColor="#4CAF50"/>
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="총 러닝" android:textSize="11sp" android:textColor="#888888"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center">
+            <TextView android:id="@+id/tvTotalDist"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="0.0" android:textSize="24sp" android:textStyle="bold"
+                android:textColor="#4CAF50"/>
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="총 거리(km)" android:textSize="11sp" android:textColor="#888888"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center">
+            <TextView android:id="@+id/tvTotalCal"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="0" android:textSize="24sp" android:textStyle="bold"
+                android:textColor="#4CAF50"/>
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="총 칼로리" android:textSize="11sp" android:textColor="#888888"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- 기록 목록 -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvRuns"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:padding="12dp"/>
+
+    <TextView
+        android:id="@+id/tvEmpty"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:text="아직 러닝 기록이 없어요.\n첫 러닝을 시작해보세요! 🏃"
+        android:textColor="#666666"
+        android:textSize="16sp"
+        android:gravity="center"
+        android:visibility="gone"/>
+
+</LinearLayout>

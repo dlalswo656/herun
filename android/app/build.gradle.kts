@@ -41,11 +41,14 @@ dependencies {
     androidTestImplementation(libs.ext.junit)
     androidTestImplementation(libs.espresso.core)
 
-    // Kakao Map SDK
-    implementation("com.kakao.maps.open:android:2.13.1")
+    // Kakao Map SDK (나중에 추가)
+    // implementation("com.kakao.maps.open:android:2.13.1")
 
     // GPS Location
     implementation("com.google.android.gms:play-services-location:21.3.0")
+
+    // RecyclerView
+    implementation("androidx.recyclerview:recyclerview:1.3.2")
 
     // Retrofit (API 통신)
     implementation("com.squareup.retrofit2:retrofit:2.9.0")
