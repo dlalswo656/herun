@@ -1,5 +1,6 @@
 package com.herun.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.*;
 import java.time.LocalDateTime;
@@ -35,6 +36,7 @@ public class User {
     @Column(updatable = false)
     private LocalDateTime createdAt;
 
+    @JsonIgnore
     @OneToMany(mappedBy = "user", cascade = CascadeType.ALL)
     private List<RunRecord> runRecords = new ArrayList<>();
 
