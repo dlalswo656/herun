@@ -14,7 +14,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
 public class ApiClient {
 
     // 에뮬레이터에서 localhost 접근 시 10.0.2.2 사용
-    private static final String BASE_URL = "http://10.0.2.2:8080/api/";
+    private static final String BASE_URL = "http://192.168.75.171:8080/api/";
     private static Retrofit retrofit = null;
     private static Context appContext;
 

@@ -5,19 +5,11 @@
     android:layout_height="match_parent"
     android:background="#0D1117">
 
-    <!-- 지도 자리 (카카오맵 SDK 추가 후 교체) -->
-    <FrameLayout
+    <!-- 카카오맵 (경로 표시) -->
+    <com.kakao.vectormap.MapView
+        android:id="@+id/mapView"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="#1A2A1A">
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:text="🗺️ 경로 지도"
-            android:textSize="20sp"
-            android:textColor="#4CAF50"/>
-    </FrameLayout>
+        android:layout_height="match_parent"/>
 
     <!-- 상단 통계 패널 -->
     <LinearLayout
@@ -129,6 +121,21 @@
             </LinearLayout>
         </LinearLayout>
     </LinearLayout>
+
+    <!-- 내 위치 버튼 -->
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabMyLocation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="120dp"
+        android:src="@android:drawable/ic_menu_mylocation"
+        android:contentDescription="내 위치"
+        app:backgroundTint="#1A1A2E"
+        app:tint="#4CAF50"
+        app:fabSize="mini"
+        xmlns:app="http://schemas.android.com/apk/res-auto"/>
 
     <!-- 하단 정지 버튼 -->
     <Button
