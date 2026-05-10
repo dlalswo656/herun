@@ -1,3 +1,7 @@
+# 보고서 [HeRun_Portfolio_Report.docx](https://github.com/user-attachments/files/27567255/HeRun_Portfolio_Report.docx)
+
+# HeRun Portfolio 20260510 완성
+
 Backend (Spring Boot)
 - User, RunRecord Entity 설계
 - 회원가입/로그인 API (JWT)
