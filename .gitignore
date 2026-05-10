@@ -1,0 +1,24 @@
+# Backend
+backend/target/
+backend/*.iml
+backend/src/main/resources/application.properties
+
+# Admin (React)
+admin/node_modules/
+admin/dist/
+
+# Android
+android/.gradle/
+android/build/
+android/app/build/
+android/local.properties
+android/*.iml
+android/**/*.iml
+
+# IntelliJ / Android Studio
+.idea/
+*.iml
+
+# OS
+.DS_Store
+Thumbs.db

@@ -1,0 +1,8 @@
+target/
+*.class
+*.jar
+.idea/
+*.iml
+
+# API 키 포함 설정 파일 (절대 커밋 금지)
+src/main/resources/application.properties
