@@ -2,21 +2,23 @@
 
 # HeRun Portfolio 20260510 완성
 
-Backend (Spring Boot)
-- User, RunRecord Entity 설계
-- 회원가입/로그인 API (JWT)
-- 러닝 기록 저장/조회/통계 API
-- 관리자 API (전체 통계, 회원/기록 관리)
+# 🏃 HeRun - 러닝 트래킹 앱
 
-Admin Web (React + Vite)
-- 로그인 페이지
--대시보드 (통계 카드 + 월별 차트 - recharts)
-- 회원 관리 페이지
-- 러닝 기록 페이지
+GPS 기반 러닝 기록 Android 앱 + Spring Boot 백엔드 + React 관리자 웹
 
-Android App (Java)
-- 로그인 / 회원가입 화면
-- 메인 화면 (지도 자리 + 러닝 시작 버튼)
-- 러닝 화면 (GPS 실시간 추적, 거리/시간/페이스/칼로리
-기록 목록 화면 (통계 요약 + RecyclerView)
-Retrofit API 연동
+## 기술 스택
+- **Backend** : Spring Boot, JPA, MySQL, JWT
+- **Admin** : React, Vite, Recharts
+- **Android** : Java, Kakao Map SDK, Retrofit2
+
+## 주요 기능
+- GPS 실시간 추적 및 러닝 경로 지도 시각화
+- 거리 / 시간 / 페이스 / 칼로리 실시간 계산
+- 러닝 기록 저장 및 히스토리 조회
+- 관리자 페이지 (통계 대시보드, 회원/기록 관리)
+
+## 프로젝트 구조
+herun/
+├── backend/   # Spring Boot API 서버
+├── admin/     # React 관리자 웹
+└── android/   # Android 앱
