@@ -5,21 +5,11 @@
     android:layout_height="match_parent"
     android:background="#0D1117">
 
-    <!-- 지도 자리 (카카오맵 SDK 추가 후 교체) -->
-    <FrameLayout
-        android:id="@+id/mapPlaceholder"
+    <!-- 카카오맵 -->
+    <com.kakao.vectormap.MapView
+        android:id="@+id/mapView"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="#1A2A1A">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:text="🗺️ 지도 영역"
-            android:textSize="24sp"
-            android:textColor="#4CAF50"/>
-    </FrameLayout>
+        android:layout_height="match_parent"/>
 
     <!-- 상단 바 -->
     <LinearLayout

@@ -41,8 +41,10 @@ dependencies {
     androidTestImplementation(libs.ext.junit)
     androidTestImplementation(libs.espresso.core)
 
-    // Kakao Map SDK (나중에 추가)
-    // implementation("com.kakao.maps.open:android:2.13.1")
+    // Kakao Map SDK (로컬 AAR)
+    implementation(files("libs/kakaomap.aar"))
+    // 카카오맵 SDK 의존 라이브러리
+    implementation("com.getkeepsafe.relinker:relinker:1.4.5")
 
     // GPS Location
     implementation("com.google.android.gms:play-services-location:21.3.0")
