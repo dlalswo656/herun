@@ -1,4 +1,4 @@
-# 보고서 [HeRun_Portfolio_Report.docx](https://github.com/user-attachments/files/27584009/HeRun_Portfolio_Report.docx)
+# 보고서 [HeRun_Portfolio_Report.pdf](https://github.com/user-attachments/files/28304046/HeRun_Portfolio_Report.pdf)
 
 # HeRun Portfolio 20260510 완성
 
