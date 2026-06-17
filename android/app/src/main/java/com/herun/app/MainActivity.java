@@ -7,6 +7,7 @@ import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.Manifest;
@@ -30,6 +31,8 @@ public class MainActivity extends AppCompatActivity {
     private KakaoMap kakaoMap;
     private Button btnStartRun;
     private ImageButton btnHistory;
+    private ImageButton btnLogout;
+    private com.google.android.material.floatingactionbutton.FloatingActionButton fabMyLocation;
     private TextView tvUsername;
 
     @Override
@@ -44,10 +47,12 @@ public class MainActivity extends AppCompatActivity {
 
         setContentView(R.layout.activity_main);
 
-        tvUsername  = findViewById(R.id.tvUsername);
-        btnStartRun = findViewById(R.id.btnStartRun);
-        btnHistory  = findViewById(R.id.btnHistory);
-        mapView     = findViewById(R.id.mapView);
+        tvUsername    = findViewById(R.id.tvUsername);
+        btnStartRun   = findViewById(R.id.btnStartRun);
+        btnHistory    = findViewById(R.id.btnHistory);
+        btnLogout     = findViewById(R.id.btnLogout);
+        fabMyLocation = findViewById(R.id.fabMyLocation);
+        mapView       = findViewById(R.id.mapView);
 
         tvUsername.setText(ApiClient.getUsername());
 
@@ -70,14 +75,22 @@ public class MainActivity extends AppCompatActivity {
         btnStartRun.setOnClickListener(v ->
                 startActivity(new Intent(this, RunningActivity.class)));
 
-        // 내 위치 버튼
-        findViewById(R.id.btnStartRun).setOnLongClickListener(v -> {
-            moveToCurrentLocation();
-            return true;
-        });
+        fabMyLocation.setOnClickListener(v -> moveToCurrentLocation());
 
         btnHistory.setOnClickListener(v ->
                 startActivity(new Intent(this, HistoryActivity.class)));
+
+        btnLogout.setOnClickListener(v ->
+                new AlertDialog.Builder(this)
+                        .setTitle("로그아웃")
+                        .setMessage("로그아웃 하시겠어요?")
+                        .setPositiveButton("로그아웃", (d, w) -> {
+                            ApiClient.clearToken();
+                            startActivity(new Intent(this, LoginActivity.class));
+                            finish();
+                        })
+                        .setNegativeButton("취소", null)
+                        .show());
     }
 
     private void moveToCurrentLocation() {

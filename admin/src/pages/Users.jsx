@@ -77,7 +77,7 @@ export default function Users() {
               <tr key={u.id}>
                 <td>{u.id}</td>
                 <td style={{ fontWeight: 600 }}>{u.username}</td>
-                <td>{u.email}</td>
+                <td>{u.email.replace(/(.{2}).*(@.*)/, '$1***$2')}</td>
                 <td>{u.age ?? '-'}</td>
                 <td>{u.weight ? `${u.weight}kg` : '-'}</td>
                 <td>{u.height ? `${u.height}cm` : '-'}</td>

@@ -219,7 +219,14 @@ public class RunningActivity extends AppCompatActivity {
 
     private void saveAndFinish() {
         stopTracking();
-        if (totalDistanceKm < 0.01) {
+        // 실제 배포시 거리 길게 최소값
+//        if (totalDistanceKm < 0.01) {
+//            Toast.makeText(this, "러닝 거리가 너무 짧아요.", Toast.LENGTH_SHORT).show();
+//            finish();
+//            return;
+//        }
+        // 테스트용 거리 짧게
+        if (totalDistanceKm < 0.001) {
             Toast.makeText(this, "러닝 거리가 너무 짧아요.", Toast.LENGTH_SHORT).show();
             finish();
             return;
